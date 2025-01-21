@@ -20,11 +20,121 @@
     </script>
     <noscript><div><img src="" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .collapsible {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #ccc;
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
 <body>
+    <h1>Удивительный мир мыльных пузырей</h1>
 
-    <h1>Track Testing</h1>
+    <p>Мыльные пузыри – это завораживающее явление, сочетающее в себе красоту и науку.  Тончайшая пленка мыльного раствора, заключенная между двумя поверхностно-активными слоями, создает радужные переливы благодаря интерференции света. Форма пузыря, обычно сферическая, определяется взаимодействием поверхностного натяжения и силы тяжести.  Но на самом деле,  мир мыльных пузырей гораздо богаче и интереснее, чем кажется на первый взгляд.</p>
+
+    <img src="" alt="Мыльный пузырь">
+
+    <div class="collapsible">
+        <h3>Наука за мыльными пузырями</h3>
+    </div>
+    <div class="content">
+        <p>Поверхностное натяжение – ключевой фактор. Молекулы воды внутри пузыря притягиваются друг к другу сильнее, чем к молекулам воздуха. Это создает натянутую поверхность, стремящуюся к минимальной площади – идеальной сфере.  Радужные цвета возникают из-за интерференции света, отраженного от внутренней и внешней поверхностей тонкой пленки. Толщина пленки определяет, какие длины волн света усиливаются, а какие ослабляются, создавая эффект радуги. <a href="https://ru.wikipedia.org/wiki/%D0%9C%D1%8B%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BF%D1%83%D0%B7%D1%8B%D1%80%D1%8C" target="_blank">Узнайте больше на Википедии.</a></p>
+    </div>
+
+    <div class="collapsible">
+        <h3>История мыльных пузырей</h3>
+    </div>
+    <div class="content">
+        <p>Хотя мыльные пузыри известны людям веками, систематическое изучение их свойств началось относительно недавно.  Многочисленные эксперименты и наблюдения позволили ученым понять физические принципы, лежащие в основе этого явления.  <a href="https://www.sciencemuseum.org.uk/objects-and-stories/blowing-bubbles" target="_blank">Посмотрите интересный материал в Science Museum.</a></p>
+    </div>
 
 
+    <div class="collapsible">
+        <h3>Рецепт идеального раствора</h3>
+    </div>
+    <div class="content">
+        <p>Смешайте 6 частей воды, 3 части жидкости для мытья посуды (лучше всего подходит средство без добавок) и 1 часть глицерина.  Тщательно перемешайте, но не взбалтывайте, чтобы не образовывались пузырьки воздуха.  Дайте раствору постоять несколько часов, чтобы пузырьки воздуха вышли.  Экспериментируйте с пропорциями для достижения наилучшего результата!  Вы также можете попробовать добавить немного сахара.</p>
+    </div>
+
+    <div class="collapsible">
+        <h3>Интересные факты</h3>
+    </div>
+    <div class="content">
+        <ul>
+            <li>Самый большой мыльный пузырь в мире был размером с автомобиль!</li>
+            <li>Форма пузыря может изменяться под воздействием ветра или других пузырей.</li>
+            <li>Мыльные пузыри используются в научных исследованиях для изучения поверхностного натяжения и других физических явлений.</li>
+            <li>В некоторых культурах мыльные пузыри ассоциируются с детством, игрой и радостью.</li>
+        </ul>
+    </div>
+
+    <div class="collapsible">
+        <h3>Эксперименты</h3>
+    </div>
+    <div class="content">
+        <p>Попробуйте заморозить мыльный пузырь!  Или попробуйте создать гигантский пузырь с помощью специальной рамки.  Исследуйте, как разные добавки влияют на свойства пузырей.  Создайте соревнование на выдувание самых больших или самых долгоживущих пузырей!</p>
+    </div>
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+    </script>
 </body>
 </html>
